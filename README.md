@@ -1,6 +1,7 @@
 # ITIP
 Lab 1
-JavaHelloWorldProgram.java
+
+1. JavaHelloWorldProgram.java
 
 public class JavaHelloWorldProgram {
 
@@ -10,7 +11,8 @@ public class JavaHelloWorldProgram {
     }
 }
 
-Primes. java
+2. Primes. java
+   
 public class Primes {
 
     public static void main(String[] args) {
@@ -51,7 +53,8 @@ public class Primes {
 
 }
 
-Palindrome.java
+3. Palindrome.java
+   
 public class Palindrome {
 
     public static void main(String[] args) {
