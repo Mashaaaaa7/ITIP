@@ -3,7 +3,9 @@ Lab 1
 JavaHelloWorldProgram.java
 
 public class JavaHelloWorldProgram {
+
     public static void main(String[] args) {
+
         System.out.println("Hello, word!");
     }
 }
