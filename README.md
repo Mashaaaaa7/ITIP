@@ -1,4 +1,4 @@
-# ITIP 1 laboratornaya + 10 первых tasks
+# ITIP 1 laboratornaya 
 Lab 1
 
 1. JavaHelloWorldProgram.java
