@@ -218,7 +218,7 @@ public class TernaryOperator {
 }
 
 
-TernaryOperator
+/*TernaryOperator
 
 Этот код демонстрирует использование тернарного оператора в Java для определения максимального числа из двух.
 
@@ -269,7 +269,7 @@ TernaryOperator
 Код из класса TernaryOperator выводит максимальное число из двух переданных значений (a и b), используя тернарный оператор. 
 
 Синтаксис тернарного оператора в Java: результат = выражение ? значение1 : значение2. Если выражение true, то значение1 присваивается переменной результат, иначе значение2 присваивается переменной результат. 
-В данном случае max = (a > b) ? a : b.  Таким образом, максимальным числом будет то, которое больше: a или b, в зависимости от сравнения этих значений.
+В данном случае max = (a > b) ? a : b.  Таким образом, максимальным числом будет то, которое больше: a или b, в зависимости от сравнения этих значений.*/  
 
 
 
@@ -287,7 +287,7 @@ public class DuvetСovers {
         // Площадь одной детали
         double SquareDetail = h * w;
         // Площадь ткани
-        double Squarecloth = cloth * 2;
+        double Squarecloth = cloth / 2;
         // Количество пододеяльников
         int number = (int) (Squarecloth / SquareDetail);
         return number;
@@ -295,8 +295,8 @@ public class DuvetСovers {
 
     public static void main(String[] args) {
         // Пример использования функции
-        double cloth = 5.0; // Длина ткани в метрах
-        double h = 1.5; // Ширина детали в метрах
+        double cloth = 22; // Длина ткани в метрах
+        double h = 1.4; // Ширина детали в метрах
         double w = 2.0; // Длина детали в метрах
 
         int number = numberCovers(cloth, h, w);
@@ -323,7 +323,6 @@ public class DuvetСovers {
    - Результат выводится на экран.**/
 
 
-
 // Task 7. Напишите функцию, вычисляющую факториал выбранного числа.
 
 // Driver Class
@@ -342,8 +341,7 @@ class Test {
     public static void main(String[] args)
     {
         int num = 4;
-        System.out.println("Factorial of " + num + " is "
-                + factorial(5));
+        System.out.println("Factorial of " + num + " is " + factorial(5));
     }
 }
 
@@ -367,7 +365,7 @@ public class GreatestCommonDivisor {
     }
 
     public static void main(String[] args) {
-        System.out.println("Наибольший общий делитель чисел 48 и 36 равен " + gcd(15, 36));
+        System.out.println("Наибольший общий делитель чисел 15 и 36 равен " + gcd(15, 36));
     }
 }
 
@@ -391,11 +389,13 @@ public class GreatestCommonDivisor {
  */
 
 public class TicketRevenueCalculator {
-    public static int calculateRevenue (int ticketsQuantity, int ticketPrice, int commission) {
-        return ticketsQuantity * ticketPrice + ticketsQuantity * commission;
+    public static int calculateRevenue (int ticketsQuantity, int ticketPrice) {
+        return (int) (ticketsQuantity * ticketPrice * 0.72);
     }
     public static void main(String[] args) {
-        System.out.println("Общая выручка от продажи билетов равна " + calculateRevenue(10, 500, 100));
+        System.out.println("Общая выручка от продажи билетов равна " + calculateRevenue(70, 1500));
+        System.out.println("Общая выручка от продажи билетов равна " + calculateRevenue(24, 950));
+        System.out.println("Общая выручка от продажи билетов равна " + calculateRevenue(53, 1250));
     }
 }
 
@@ -416,19 +416,30 @@ public class TicketRevenueCalculator {
 
 public class SeatsCalculation {
     public static int calculateSeats(int students, int desks) {
-        if (students < 0 || desks < 0) {
-            throw new IllegalArgumentException("Количество студентов и парт должно быть неотрицательным");
+
+        // Рассчитываем максимальное количество студентов, которое можно разместить
+        int maxSeats = desks * 2;
+
+        // Если количество студентов больше максимального,
+        // возвращаем количество недостающих столов
+        if (students > maxSeats) {
+            return students - maxSeats;
+        } else {
+            return 0;
+
         }
-        return (students / 2) - desks;
+
     }
 
     public static void main(String[] args) {
-        System.out.println(calculateSeats(6, 2));
+        System.out.println(calculateSeats(5, 2));   // 1
+        System.out.println(calculateSeats(31, 20)); // 0
+        System.out.println(calculateSeats(123, 58)); // 7
     }
 }
 
 
+
 /*функция calculateSeats принимает два аргумента: количество студентов students и количество парт desks.
 Она вычисляет минимальное количество столов для размещения студентов, деля количество студентов на 2,
-а затем вычитает это значение из количества парт. Результат возвращается в виде целого числа,
- которое показывает, сколько столов не хватает для размещения всех студентов.*/
+а затем вычитает это значение из количества парт. Результат возвращается в виде целого числа,которое показывает, сколько столов не хватает для размещения всех студентов.*/
